@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+
+<!-- about breadcrumb -->
+<section class="w3l-about-breadcrumb position-relative text-center">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+        <div class="container py-lg-5 py-3">
+            <h2 class="title text-morii">Câu Chuyện</h2>
+            <ul class="breadcrumbs-custom-path mt-2">
+                <li><a href="Index">Trang Chủ</a></li>
+                <li class="active"><span class="fa fa-angle-double-right mx-2" aria-hidden="true"></span> Câu Chuyện </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- //about breadcrumb -->
+<!-- /content-6-->
+<section class="w3l-content-6">
+    <div class="container py-lg-4 mt-80 mb-80 cauchuyen">
+        <h2 class="text-uppercase text-morii font-weight-bold mb-20">Câu Chuyện</h2>
+        <p>
+            Là “thủ phủ” cà phê nổi tiếng trên thế giới, thức uống này là món
+            không thể thiếu đối với người dân Italy. Họ thường bắt đầu ngày mới
+            với một ly cà phê và loại thường được dùng nhiều nhất chính là
+            Espresso.
+        </p>
+        <p>
+            <img class="w-100" src="~/Assets/Images/MoriiChuyen1.jpg" />
+            <img class="w-100" src="~/Assets/Images/MoriiChuyen2.jpg" />
+        </p>
+        <p class="text-center">
+            <span>< Tư liệu: Sinh hoạt cà phê tại Cộng xưa ></span>
+        </p>
+        <p>
+            Đây là loại&nbsp;cà phê có thể phục vụ nhanh, có cho bạn ngay lập tức
+            và thường được đựng trong những chiếc ly nhỏ. Người Italy khi thưởng
+            thức sẽ cầm ly trong tay, hít hà mùi thơm quyến rũ rồi uống trong 3-4
+            hơi. Cả quá trình diễn ra nhanh gọn nhưng đầy thanh lịch theo đúng
+            phong cách người Italy.
+            Ở Pháp thường dùng Café Au Lait, nghe thôi đã rất Pháp rồi đúng không?
+            Đây là loại cà phê được pha chế hết sức đơn giản.&nbsp;
+        </p>
+        <p>
+            Sứ mệnh của chúng tôi là khơi dậy trí tưởng tượng và mang
+            đến cho khách hàng những trải nghiệm cảm xúc khác biệt về Việt Nam.
+            Chúng tôi đang không ngừng sáng tạo với mục tiêu là tiến xa hơn để
+            mang Cộng đến với thế giới; lan toả và truyền cảm hứng bằng trái tim
+            của mỗi thành viên.
+            Là sự pha trộn giữa cà phê espresso và sữa tươi nóng. Café Au Lait là
+            thức uống yêu thích của người Pháp vào buổi sáng và thường được dùng
+            cùng bánh mì Baguette. Café Au Lait và Baguette, sự kết hợp biểu tượng
+            của ẩm thực Pháp.
+            Eiskaffee&nbsp;là món cà phê quen thuộc của người Đức. Nó đích thị
+            dành cho những ai thích sự ngọt ngào. Eiskaffee&nbsp;trong tiếng Đức
+            có nghĩa là “cà phê kem lạnh”. Vị beo béo của kem lạnh lơ lửng trong
+            lớp cà phê đắng kết hợp cùng tầng kem whipping ngọt ngào và một ít vụn
+            choco đã tạo nên thứ đồ uống hấp dẫn khó cưỡng.&nbsp;
+        </p>
+        <p>
+            <img class="w-100" src="~/Assets/Images/MoriiChuyen3.jpeg" />
+            <img class="w-100" src="~/Assets/Images/MoriiChuyen4.jpeg" />
+            <img class="w-100" src="~/Assets/Images/MoriiChuyen5.jpeg" />
+        </p>
+        <p class="text-center">
+            <span>< Rich's Caption Image ></span>
+        </p>
+    </div>
+</section>
+<!-- //content-6-->
+<!-- team -->
+<!-- Template JavaScript -->
+<script src="~/Assets/Client/js/jquery-3.3.1.min.js"></script>
+<script src="~/Assets/Client/js/theme-change.js"></script>
+<!-- disable body scroll which navbar is in active -->
+<script>
+    $(function () {
+        $('.navbar-toggler').click(function () {
+            $('body').toggleClass('noscroll');
+        })
+    });
+</script>
+<!-- disable body scroll which navbar is in active -->
+<!--/MENU-JS-->
+<script>
+    $(window).on("scroll", function () {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 80) {
+            $("#site-header").addClass("nav-fixed");
+        } else {
+            $("#site-header").removeClass("nav-fixed");
+        }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function () {
+        $("header").toggleClass("active");
+    });
+    $(document).on("ready", function () {
+        if ($(window).width() > 991) {
+            $("header").removeClass("active");
+        }
+        $(window).on("resize", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+        });
+    });
+</script>
+
+
+<style>
+    .cau-chuyen-item {
+        color: #146d4d !important;
+    }
+</style>
